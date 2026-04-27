@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piloto - NFS Rivals</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <style>
+        body { background-color: #110000; }
+        .header-bg {
+            background: linear-gradient(to right, rgba(80, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url('assets/images/racer.png') center/cover;
+            padding: 8rem 0 4rem;
+            border-bottom: 3px solid var(--racer-red);
+        }
+        
+        /* Imagen del Auto Local */
+        .car-img {
+            height: 220px; 
+            object-fit: cover; 
+            border-bottom: 2px solid var(--racer-red);
+            background-color: #1a1a1a; /* Fondo oscuro por si tarda en cargar la imagen del usuario */
+        }
+
+        /* Tecnologías */
+        .tech-icon-container {
+            position: relative;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--racer-red);
+            background: radial-gradient(circle at center, rgba(80, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%);
+            box-shadow: inset 0 0 20px rgba(255, 0, 0, 0.15), 0 0 10px rgba(255, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+        .tech-icon-container:hover {
+            box-shadow: inset 0 0 30px rgba(255, 0, 0, 0.4), var(--neon-red);
+            transform: translateY(-5px);
+        }
+        .tech-icon-center {
+            font-size: 4rem;
+            color: var(--racer-red);
+            text-shadow: var(--neon-red);
+        }
+
+        .border-danger-custom { border-color: var(--racer-red) !important; }
+        .text-danger-custom { color: var(--racer-red) !important; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold glitched-text" href="index.html" data-text="< VOLVER">
+                <i class="fa-solid fa-arrow-left me-2"></i> INICIO
+            </a>
+            <span class="text-danger-custom fw-bold fs-4 ms-auto font-oswald tracking-wider" style="text-shadow: var(--neon-red);">Redview Racers</span>
+        </div>
+    </nav>
+
+    <header class="header-bg text-white text-center">
+        <div class="container position-relative z-index-2" data-aos="fade-down">
+            <i class="fa-solid fa-fire-flame-curved fa-4x text-danger-custom mb-3"></i>
+            <h1 class="display-3 fw-bold text-uppercase tracking-in-expand">Fugitivos del Asfalto</h1>
+            <p class="lead w-75 mx-auto">Vives para el peligro, la adrenalina y la libertad de correr sin límites. Acumula SpeedPoints rompiendo las leyes, evadiendo a la policía de todo el condado y dominando cada centímetro de las calles.</p>
+        </div>
+    </header>
+
+    <section class="py-5 text-white">
+        <div class="container">
+            <h2 class="display-5 fw-bold mb-5 border-bottom border-secondary pb-3 text-uppercase"><span class="text-danger-custom">Superautos</span> Ilegales</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="card bg-dark text-light border-danger-custom h-100 glass-panel overflow-hidden">
+                        <!-- Imagen local asignada al usuario -->
+                        <img src="assets/images/Ferrari F12berlinetta.jpg" alt="Coloca aquí la foto del Ferrari F12berlinetta" class="card-img-top car-img">
+                        <div class="card-body">
+                            <h4 class="card-title text-danger-custom fw-bold text-uppercase border-bottom border-secondary pb-2">Ferrari F12berlinetta</h4>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="fa-solid fa-gauge-high text-light opacity-75 me-2"></i> <strong>Velocidad Máx:</strong> 340 km/h</li>
+                                <li class="mb-2"><i class="fa-solid fa-stopwatch text-light opacity-75 me-2"></i> <strong>0-100 km/h:</strong> 3.1s</li>
+                                <li class="mb-2"><i class="fa-solid fa-car text-light opacity-75 me-2"></i> <strong>Clase:</strong> Grand Tourer</li>
+                                <li><i class="fa-solid fa-weight-scale text-light opacity-75 me-2"></i> <strong>Aceleración:</strong> Excelente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card bg-dark text-light border-danger-custom h-100 glass-panel overflow-hidden">
+                        <!-- Imagen local asignada al usuario -->
+                        <img src="assets/images/McLaren P1.jpg" alt="Coloca aquí la foto del McLaren P1" class="card-img-top car-img">
+                        <div class="card-body">
+                            <h4 class="card-title text-danger-custom fw-bold text-uppercase border-bottom border-secondary pb-2">McLaren P1</h4>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="fa-solid fa-gauge-high text-light opacity-75 me-2"></i> <strong>Velocidad Máx:</strong> 350 km/h</li>
+                                <li class="mb-2"><i class="fa-solid fa-stopwatch text-light opacity-75 me-2"></i> <strong>0-100 km/h:</strong> 2.8s</li>
+                                <li class="mb-2"><i class="fa-solid fa-car text-light opacity-75 me-2"></i> <strong>Clase:</strong> Hypercar Híbrido</li>
+                                <li><i class="fa-solid fa-weight-scale text-light opacity-75 me-2"></i> <strong>Aceleración:</strong> Máxima</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card bg-dark text-light border-danger-custom h-100 glass-panel overflow-hidden">
+                        <!-- Imagen local asignada al usuario -->
+                        <img src="assets/images/Lamborghini Veneno.jpg" alt="Coloca aquí la foto del Lamborghini Veneno" class="card-img-top car-img">
+                        <div class="card-body">
+                            <h4 class="card-title text-danger-custom fw-bold text-uppercase border-bottom border-secondary pb-2">Lamborghini Veneno</h4>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="fa-solid fa-gauge-high text-light opacity-75 me-2"></i> <strong>Velocidad Máx:</strong> 355 km/h</li>
+                                <li class="mb-2"><i class="fa-solid fa-stopwatch text-light opacity-75 me-2"></i> <strong>0-100 km/h:</strong> 2.9s</li>
+                                <li class="mb-2"><i class="fa-solid fa-car text-light opacity-75 me-2"></i> <strong>Clase:</strong> Hypercar Exclusivo</li>
+                                <li><i class="fa-solid fa-weight-scale text-light opacity-75 me-2"></i> <strong>Aceleración:</strong> Extrema</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card bg-dark text-light border-danger-custom h-100 glass-panel overflow-hidden">
+                        <!-- Imagen local asignada al usuario -->
+                        <img src="assets/images/Porsche 918 Spyder.jpg" alt="Coloca aquí la foto del Porsche 918 Spyder" class="card-img-top car-img">
+                        <div class="card-body">
+                            <h4 class="card-title text-danger-custom fw-bold text-uppercase border-bottom border-secondary pb-2">Porsche 918 Spyder</h4>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="fa-solid fa-gauge-high text-light opacity-75 me-2"></i> <strong>Velocidad Máx:</strong> 345 km/h</li>
+                                <li class="mb-2"><i class="fa-solid fa-stopwatch text-light opacity-75 me-2"></i> <strong>0-100 km/h:</strong> 2.6s</li>
+                                <li class="mb-2"><i class="fa-solid fa-car text-light opacity-75 me-2"></i> <strong>Clase:</strong> Hypercar</li>
+                                <li><i class="fa-solid fa-weight-scale text-light opacity-75 me-2"></i> <strong>Aceleración:</strong> Brutal</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card bg-dark text-light border-danger-custom h-100 glass-panel overflow-hidden">
+                        <!-- Imagen local asignada al usuario -->
+                        <img src="assets/images/Gemini_Generated_Image_9tooqz9tooqz9too.png" alt="Coloca aquí la foto del Pagani Huayra" class="card-img-top car-img">
+                        <div class="card-body">
+                            <h4 class="card-title text-danger-custom fw-bold text-uppercase border-bottom border-secondary pb-2">Pagani Huayra</h4>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="fa-solid fa-gauge-high text-light opacity-75 me-2"></i> <strong>Velocidad Máx:</strong> 383 km/h</li>
+                                <li class="mb-2"><i class="fa-solid fa-stopwatch text-light opacity-75 me-2"></i> <strong>0-100 km/h:</strong> 3.3s</li>
+                                <li class="mb-2"><i class="fa-solid fa-car text-light opacity-75 me-2"></i> <strong>Clase:</strong> Hypercar Ligero</li>
+                                <li><i class="fa-solid fa-weight-scale text-light opacity-75 me-2"></i> <strong>Aceleración:</strong> Alta</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card bg-dark text-light border-danger-custom h-100 glass-panel overflow-hidden">
+                        <!-- Imagen local asignada al usuario -->
+                        <img src="assets/images/Ford GT.jpg" alt="Coloca aquí la foto del Ford GT" class="card-img-top car-img">
+                        <div class="card-body">
+                            <h4 class="card-title text-danger-custom fw-bold text-uppercase border-bottom border-secondary pb-2">Ford GT</h4>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="fa-solid fa-gauge-high text-light opacity-75 me-2"></i> <strong>Velocidad Máx:</strong> 347 km/h</li>
+                                <li class="mb-2"><i class="fa-solid fa-stopwatch text-light opacity-75 me-2"></i> <strong>0-100 km/h:</strong> 3.0s</li>
+                                <li class="mb-2"><i class="fa-solid fa-car text-light opacity-75 me-2"></i> <strong>Clase:</strong> Superdeportivo Motor Central</li>
+                                <li><i class="fa-solid fa-weight-scale text-light opacity-75 me-2"></i> <strong>Aceleración:</strong> Alta</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="py-5 bg-black text-white">
+        <div class="container">
+            <h2 class="display-5 fw-bold mb-5 text-uppercase text-center" data-aos="fade-up">Tecnología de <span class="text-danger-custom">Evasión</span></h2>
+            
+            <div class="row mt-5">
+                <div class="col-md-3 mb-4 text-center" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="tech-icon-container">
+                        <i class="fa-solid fa-forward tech-icon-center"></i>
+                    </div>
+                    <h4 class="fw-bold text-uppercase mt-3">Turbo</h4>
+                    <p class="text-light fs-6">Proporciona un impulso extremo de velocidad máxima inmediata durante varios segundos. Ideal para perder persecutores pesados.</p>
+                </div>
+                <div class="col-md-3 mb-4 text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="tech-icon-container">
+                        <i class="fa-solid fa-wifi tech-icon-center"></i>
+                    </div>
+                    <h4 class="fw-bold text-uppercase mt-3">Jammer (Inhibidor)</h4>
+                    <p class="text-light fs-6">Interfiere los instrumentos de los policías cercanos, evitando que te fijen con armas PEM y deshabilitando su HUD.</p>
+                </div>
+                <div class="col-md-3 mb-4 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="tech-icon-container">
+                        <i class="fa-solid fa-shield tech-icon-center"></i>
+                    </div>
+                    <h4 class="fw-bold text-uppercase mt-3">Escudo Electrostático</h4>
+                    <p class="text-light fs-6">Crea un campo alrededor del vehículo que absorbe el impacto físico o daño de armas y daña ligeramente a quien lo toque.</p>
+                </div>
+                <div class="col-md-3 mb-4 text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="tech-icon-container">
+                        <i class="fa-solid fa-bomb tech-icon-center"></i>
+                    </div>
+                    <h4 class="fw-bold text-uppercase mt-3">Mina Aturdidora</h4>
+                    <p class="text-light fs-6">Suelta un dispositivo detrás de tu auto. Si un policía lo toca, explota dañando la electrónica e integridad de su coche drásticamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Music Player -->
+    <div class="music-player position-fixed bottom-0 end-0 m-3 p-2 bg-black border rounded-pill shadow-lg d-flex align-items-center" style="z-index: 1050; border-color: rgba(255,0,0,0.5) !important;">
+        <div class="player-icon ms-2 me-3">
+            <i class="fa-solid fa-compact-disc text-danger fs-3" id="disc-icon" style="animation: spin 3s linear infinite; animation-play-state: paused;"></i>
+            <style>
+                @keyframes spin { 100% { transform: rotate(360deg); } }
+            </style>
+        </div>
+        <div class="player-info me-3 d-none d-md-block">
+            <h6 class="mb-0 text-white fw-bold text-uppercase" style="font-size: 0.85rem; letter-spacing: 1px;">NFS Rivals OST</h6>
+            <small class="text-white-50" style="font-size: 0.7rem;">Piloto - Playlist</small>
+        </div>
+        <div class="player-controls me-2">
+            <button class="btn btn-sm btn-dark rounded-circle border-secondary text-white" id="play-pause-btn" style="width: 35px; height: 35px; transition: all 0.3s;">
+                <i class="fa-solid fa-play" id="play-icon"></i>
+            </button>
+        </div>
+        <div class="player-controls me-2">
+            <button class="btn btn-sm btn-dark rounded-circle border-secondary text-white" id="play-pause-btn" style="width: 35px; height: 35px; transition: all 0.3s;">
+                <i class="fa-solid fa-play" id="play-icon"></i>
+            </button>
+        </div>
+        <audio id="bg-music" loop>
+            <source src="assets/audio/soundtrack.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Music Player Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const bgMusic = document.getElementById("bg-music");
+            const playPauseBtn = document.getElementById("play-pause-btn");
+            const playIcon = document.getElementById("play-icon");
+            const discIcon = document.getElementById("disc-icon");
+            let isPlaying = false;
+            
+            bgMusic.volume = 0.3;
+
+            playPauseBtn.addEventListener("click", function() {
+                if(isPlaying) {
+                    bgMusic.pause();
+                    playIcon.classList.remove("fa-pause");
+                    playIcon.classList.add("fa-play");
+                    discIcon.style.animationPlayState = "paused";
+                    playPauseBtn.style.boxShadow = "none";
+                } else {
+                    bgMusic.play().catch(e => console.error("No se pudo reproducir el audio local: ", e));
+                    playIcon.classList.remove("fa-play");
+                    playIcon.classList.add("fa-pause");
+                    discIcon.style.animationPlayState = "running";
+                    playPauseBtn.style.boxShadow = "0 0 10px rgba(255,0,0,0.6)";
+                }
+                isPlaying = !isPlaying;
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.css"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 800 });
+    </script>
+</body>
+</html>

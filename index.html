@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need for Speed: Rivals - The Chase</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS CSS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" tabindex="0">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold glitched-text" href="#page-top" data-text="NFS RIVALS">
+                NFS <span class="text-danger">RIVALS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">El Juego</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#factions">Facciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#media">Tráilers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#stats">Estadísticas</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="masthead position-relative d-flex align-items-center justify-content-center" id="page-top">
+        <div class="overlay"></div>
+        <div class="container text-center text-white position-relative z-index-2">
+            <h1 class="text-uppercase fw-bold mb-3 display-1 tracking-in-expand">Cruza el Límite</h1>
+            <p class="lead mb-5 fs-4 fade-in-up">Policía o Corredor. La carretera es tu campo de batalla y la velocidad tu única aliada.</p>
+            <div class="d-flex justify-content-center gap-4 fade-in-up delay-1">
+                <a class="btn btn-cop btn-lg text-uppercase fw-bold px-5 py-3" href="#factions">POLICE</a>
+                <a class="btn btn-racer btn-lg text-uppercase fw-bold px-5 py-3" href="#factions">RACER</a>
+            </div>
+        </div>
+        <div class="police-lights"></div>
+    </header>
+
+    <!-- About Section -->
+    <section class="page-section bg-dark text-white py-5" id="about">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="display-4 fw-bold mb-4">La Rivalidad <span class="text-warning">No Tiene Fin</span></h2>
+                    <p class="text-light fs-5 mb-4">Bienvenido al condado de Redview, un entorno de mundo abierto donde la tensión entre la policía y los corredores callejeros nunca se detiene. Utiliza el poder de la tecnología de persecución o la velocidad pura para dominar las calles. Cada bando tiene sus propios vehículos, sus propias recompensas y sus propios riesgos.</p>
+                    <ul class="list-unstyled text-light mb-0">
+                        <li class="mb-3"><i class="fa-solid fa-gauge-high text-danger me-2"></i> Adrenalina a mas de 300 km/h</li>
+                        <li class="mb-3"><i class="fa-solid fa-satellite-dish text-primary me-2"></i> Tecnología y armamento en ambos bandos</li>
+                        <li><i class="fa-solid fa-cloud-bolt text-warning me-2"></i> Clima dinámico e impredecible</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 text-center" data-aos="zoom-in" data-aos-duration="1000">
+                    <!-- Abstract speed lines animation -->
+                    <div class="speed-container">
+                        <div class="speed-lines"></div>
+                        <div class="speed-lines reverse"></div>
+                        <i class="fa-solid fa-car-side fa-6x text-light speed-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Factions Section -->
+    <section class="page-section py-5 bg-black" id="factions">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold text-white text-uppercase">Elige tu <span class="text-danger">Camino</span></h2>
+                <h3 class="text-light lead">Conviértete en el cazador o en la presa.</h3>
+            </div>
+            
+            <div class="row g-4 mt-4">
+                <!-- Cop Card -->
+                <div class="col-md-6" data-aos="flip-left" data-aos-duration="1200">
+                    <div class="faction-card card-cop">
+                        <div class="card-overlay bg-primary-gradient"></div>
+                        <div class="card-content">
+                            <i class="fa-solid fa-shield-halved fa-4x text-primary mb-3"></i>
+                            <h3 class="text-uppercase fw-bold mb-3">Policía</h3>
+                            <p class="fs-5">Trabaja en equipo, utiliza tecnología de punta y despliega bloqueos para detener a los corredores a toda costa. Eres la ley.</p>
+                            <a href="police.html" class="btn btn-outline-light mt-3 fw-bold neon-hover-blue">Ver Flota Policial</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Racer Card -->
+                <div class="col-md-6" data-aos="flip-right" data-aos-duration="1200" data-aos-delay="200">
+                    <div class="faction-card card-racer">
+                        <div class="card-overlay bg-danger-gradient"></div>
+                        <div class="card-content">
+                            <i class="fa-solid fa-fire-flame-curved fa-4x text-danger mb-3"></i>
+                            <h3 class="text-uppercase fw-bold mb-3">Piloto</h3>
+                            <p class="fs-5">Acumula SpeedPoints, evade a la policía y gánate el respeto en las calles. Si te atrapan, lo pierdes todo. ¿Te arriesgas?</p>
+                            <a href="racer.html" class="btn btn-outline-light mt-3 fw-bold neon-hover-red">Ver Superautos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media/Trailers Section -->
+    <section class="page-section py-5 bg-dark" id="media" style="border-top: 1px solid #333; border-bottom: 1px solid #111;">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold text-white text-uppercase">Experiencia <span class="text-danger">Cinemática</span></h2>
+                <h3 class="text-light lead">Revive la adrenalina pura a través de nuestros avances oficiales.</h3>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="p-2 bg-black border border-secondary rounded shadow-lg">
+                        <div class="ratio ratio-16x9">
+                            <!-- E3 Official Trailer -->
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/xsKHweFi7AU?si=IL1nMqYAEjTgUfDu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4 justify-content-center g-4">
+                <div class="col-lg-5 col-md-6" data-aos="fade-right" data-aos-delay="200">
+                    <div class="p-1 bg-black border border-secondary rounded shadow">
+                        <div class="ratio ratio-16x9">
+                            <!-- Gameplay teaser -->
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/MoVRyY21ba4?si=KRlcDDQ4iZZtzzni" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6" data-aos="fade-left" data-aos-delay="400">
+                    <div class="p-1 bg-black border border-secondary rounded shadow">
+                        <div class="ratio ratio-16x9">
+                            <!-- Cop vs Racer concept -->
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/zMiFKoJtssQ?si=Am_V9Iq1jcg7eewg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="page-section bg-dark text-white py-5" id="stats">
+        <div class="container py-5 text-center">
+            <h2 class="display-5 fw-bold mb-5 text-uppercase" data-aos="fade-down">El Legado en <span class="text-info">Números</span></h2>
+            <div class="row pt-4" id="counter-section">
+                <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-item h-100 position-relative p-4 border border-secondary rounded glass-panel d-flex flex-column justify-content-center">
+                        <i class="fa-solid fa-road fa-3x text-light mb-3 opacity-50"></i>
+                        <h2 class="display-3 fw-bold text-warning counter" data-target="160">0</h2>
+                        <h5 class="text-uppercase tracking-wider">Kilómetros de Asfalto</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item h-100 position-relative p-4 border border-secondary rounded glass-panel d-flex flex-column justify-content-center">
+                        <i class="fa-solid fa-car-burst fa-3x text-light mb-3 opacity-50"></i>
+                        <h2 class="display-3 fw-bold text-danger counter" data-target="84">0</h2>
+                        <h5 class="text-uppercase tracking-wider">Vehículos Épicos</h5>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item h-100 position-relative p-4 border border-secondary rounded glass-panel d-flex flex-column justify-content-center">
+                        <i class="fa-solid fa-gauge-max fa-3x text-light mb-3 opacity-50"></i>
+                        <h2 class="display-3 fw-bold text-info"><span class="counter" data-target="350">0</span>+</h2>
+                        <h5 class="text-uppercase tracking-wider">km/h Velocidad Máx</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4 bg-black text-white-50 text-center border-top border-dark">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start mb-3 mb-lg-0">
+                    <span class="text-uppercase glitched-text" data-text="REDVIEW COUNTY">Redview County</span> © 2026
+                </div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-light text-decoration-none me-3" href="#!">Políticas de Privacidad</a>
+                    <a class="link-light text-decoration-none" href="#!">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Music Player -->
+    <div class="music-player position-fixed bottom-0 end-0 m-3 p-2 bg-black border rounded-pill shadow-lg d-flex align-items-center" style="z-index: 1050; border-color: rgba(255,255,255,0.2) !important;">
+        <div class="player-icon ms-2 me-3">
+            <i class="fa-solid fa-compact-disc text-danger fs-3" id="disc-icon" style="animation: spin 3s linear infinite; animation-play-state: paused;"></i>
+            <style>
+                @keyframes spin { 100% { transform: rotate(360deg); } }
+            </style>
+        </div>
+        <div class="player-info me-3 d-none d-md-block">
+            <h6 class="mb-0 text-white fw-bold text-uppercase" style="font-size: 0.85rem; letter-spacing: 1px;">NFS Rivals OST</h6>
+            <small class="text-white-50" style="font-size: 0.7rem;">Banda Sonora Oficial</small>
+        </div>
+        <div class="player-controls me-2">
+            <button class="btn btn-sm btn-dark rounded-circle border-secondary text-white" id="play-pause-btn" style="width: 35px; height: 35px; transition: all 0.3s;">
+                <i class="fa-solid fa-play" id="play-icon"></i>
+            </button>
+        </div>
+        <div class="player-controls me-2">
+            <button class="btn btn-sm btn-dark rounded-circle border-secondary text-white" id="play-pause-btn" style="width: 35px; height: 35px; transition: all 0.3s;">
+                <i class="fa-solid fa-play" id="play-icon"></i>
+            </button>
+        </div>
+        <audio id="bg-music" loop>
+            <source src="assets/audio/soundtrack.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Music Player Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const bgMusic = document.getElementById("bg-music");
+            const playPauseBtn = document.getElementById("play-pause-btn");
+            const playIcon = document.getElementById("play-icon");
+            const discIcon = document.getElementById("disc-icon");
+            let isPlaying = false;
+            
+            bgMusic.volume = 0.3;
+
+            playPauseBtn.addEventListener("click", function() {
+                if(isPlaying) {
+                    bgMusic.pause();
+                    playIcon.classList.remove("fa-pause");
+                    playIcon.classList.add("fa-play");
+                    discIcon.style.animationPlayState = "paused";
+                    playPauseBtn.style.boxShadow = "none";
+                } else {
+                    bgMusic.play().catch(e => console.error("No se pudo reproducir el audio local: ", e));
+                    playIcon.classList.remove("fa-play");
+                    playIcon.classList.add("fa-pause");
+                    discIcon.style.animationPlayState = "running";
+                    playPauseBtn.style.boxShadow = "0 0 10px rgba(255,0,0,0.6)";
+                }
+                isPlaying = !isPlaying;
+            });
+        });
+    </script>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
