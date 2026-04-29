@@ -7,7 +7,7 @@ Su objetivo es presentar información visual atractiva sobre el juego, incluyend
 ---
 
 ##  INTECAP
-![Logo INTECAP](https://upload.wikimedia.org/wikipedia/commons/6/64/Intecap_logo.png)
+![Logo INTECAP](assets/images/Logotipo_de_el_INTECAP.png)
 
 ---
 
